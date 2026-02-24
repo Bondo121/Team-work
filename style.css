@@ -8,3 +8,15 @@
 body {
     background-color: #FAFAFA;
 }
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    width: 234;
+    height: 49;
+}
