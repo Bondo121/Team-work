@@ -6,5 +6,139 @@
 }
 
 body {
-    background-color: #FAFAFA;
+    background-color: #F0F0F0;
+}
+
+.container-second {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 118px
+}
+
+
+.card-big {
+    position: relative;
+    height: 100%;
+    margin-bottom: 97px;
+}
+
+
+.button {
+    position: absolute;
+    top: 34px;
+    left: 129px;
+    font-family: 'Poppins' sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 23px;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-right: 49px;
+}
+
+.hot {
+    font-family: 'Poppins' sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    margin-left: 389px;
+    color: #F25E5E;
+}
+
+.grey{
+    font-family: 'Poppins' sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #BCBCBC;
+
+}
+
+.text-top{
+    display: flex;
+    align-items: center;
+    padding-left: 64px;
+    margin-bottom: 29px;
+}
+
+.big-card-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 64px;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    margin-bottom: 23px;
+    color: #262626;
+}
+
+.text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #262626;
+    padding-left: 64px;
+    margin-bottom: 40px;
+}
+
+.read-shape{
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-left: 66px;
+  margin-bottom: 38px;
+}
+
+.read-link{
+    font-family: 'Poppins' sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.24em;
+    color: #4CE0D7;
+}
+
+.cards-title{
+    font-family: 'Poppins' sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #262626;
+    margin-bottom: 55px;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    gap: 59px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card-media{
+    position: relative;
 }
