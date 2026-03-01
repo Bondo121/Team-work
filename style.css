@@ -4,6 +4,364 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+/* ძირითადი სტილები */
+body {
+    background-color: #F0F0F0;
+}
+
+.container-second {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 118px
+}
+
+/* დიდი ბარათის სტილები */
+.card-big {
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 97px;
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+    
+    
+}
+
+
+.card-big .card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    object-position: 50% 54.5%;
+}
+
+.card-big .card-content {
+    padding: 23px 64px;
+}
+
+.card-big .card-media {
+    height: 360px;
+    overflow: hidden;
+}
+
+/* დიდი ღილაკის სტილები */
+.button {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    top: 20px; 
+    left: 40px;
+    background: #262626;
+    border-radius: 40px;
+    transform: matrix(1, -0.01, 0.01, 1, 0, 0); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.button-lg{
+    width: 233.95px;
+    height: 36.49px;
+}
+
+
+.button-sm{
+    width: 175.44px;
+    height: 36.49px;
+}
+
+/* დიდი ბარათის სტილები */
+.card-big-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.author{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-right: 49px;
+}
+
+
+.author img{
+    width: 65.67px;
+    height: 50.77px;
+}
+
+
+.hot {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    margin-left: 389px;
+    color: #F25E5E;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+
+.grey{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #BCBCBC;
+
+}
+
+
+.text-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 29px;
+    width: 100%;
+}
+
+
+.big-card-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    margin-bottom: 23px;
+    color: #262626;
+}
+
+
+.text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #262626;
+    margin-bottom: 40px;
+}
+
+
+.small{
+    padding-left: 35px;
+}
+
+
+.read-shape{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 38px;
+    width: fit-content;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+.shape-small{
+    padding-left: 40px;
+}
+
+
+.read-shape img {
+    width: 21.25px;
+    height: auto;
+}
+
+
+.read-link{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.24em;
+    color: #4CE0D7;
+    transition: color 0.3s ease;
+}
+
+/* პატარა ბარათების სტილები */
+.cards-title{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #262626;
+    margin-bottom: 55px;
+}
+
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 59px;
+    margin-bottom: 88px;
+}
+
+
+.card{
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+
+}
+
+
+.card-media{
+    width: 100%;
+    height: 278px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+
+.card .card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.cards .card:first-child .card-media img{
+    transform: translateX(-6%) scale(1.2);
+    transform-origin: center;
+}
+
+
+.cards .card:last-child .card-media img {
+    transform: scale(1.1);
+    object-position: 50% 55.5%;
+}
+
+
+.card-meta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 26px;
+    margin-top: 23px;
+    margin-bottom: 28px;
+}
+
+
+.card-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 34px;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    color: #262626;
+    margin-bottom: 18px;
+}
+
+/* ეფექტები მაუსის მიტანისას */
+.hot:hover {
+    transform: scale(1.1);
+    color: #ff3d3d;
+    text-shadow: 0px 0px 10px rgba(242, 94, 94, 0.3);
+}
+
+
+.read-shape:hover img {
+    transform: translateX(8px);
+}
+
+
+.read-shape:hover .read-link {
+    color: #3bcbc2;
+    text-decoration: underline;
+}
+
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+.card-big:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.button:hover {
+    background-color: white;
+    color: #262626;
+    outline: 1px solid #262626; 
+}
+
+/* ადაპტიური სტილები */
+@media (max-width: 1024px) {
+    .container-second {
+        padding: 0 40px;
+    }
+
+    .card-big .card-content {
+        padding: 23px 30px;
+    }
+
+    .big-card-title, .card-title {
+        font-size: 22px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .text-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .hot {
+        margin-left: 0;
+    }
+
+    .button-lg, .button-sm {
+        width: 160px;
+        left: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .card {
+        width: 100%;            
+        max-width: 500px;
+    }
+
+}
 
 body{
     background-color: #FAFAFA;
