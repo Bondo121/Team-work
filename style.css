@@ -29,19 +29,28 @@ body {
 }
 
 
-.card-big img {
+.card-big .card-media img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    border-radius: 20px;
+    object-position: 50% 54.5%;
 }
 
 .card-big .card-content {
     padding: 23px 64px;
 }
 
+.card-big .card-media {
+    height: 360px;
+    overflow: hidden;
+}
+
 /* დიდი ღილაკის სტილები */
 .button {
     position: absolute;
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -62,6 +71,7 @@ body {
     width: 233.95px;
     height: 36.49px;
 }
+
 
 .button-sm{
     width: 175.44px;
@@ -91,7 +101,7 @@ body {
 
 
 .hot {
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 21px;
@@ -105,7 +115,7 @@ body {
 
 
 .grey{
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
@@ -127,7 +137,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 39px;
@@ -140,7 +150,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -177,7 +187,7 @@ body {
 
 
 .read-link{
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 12px;
     line-height: 18px;
@@ -188,7 +198,7 @@ body {
 
 /* პატარა ბარათების სტილები */
 .cards-title{
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 32px;
     line-height: 48px;
@@ -207,7 +217,8 @@ body {
 
 
 .card{
-    width: 100%; 
+    width: 100%;
+    overflow: hidden;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
@@ -218,16 +229,31 @@ body {
 
 .card-media{
     width: 100%;
+    height: 278px;
+    overflow: hidden;
     position: relative;
     display: inline-block;
+    border-radius: 20px;
 }
 
 
 .card .card-media img {
-    width: 100%; 
-    height: auto; 
-    display: block; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
+}
+
+
+.cards .card:first-child .card-media img{
+    transform: translateX(-6%) scale(1.2);
+    transform-origin: center;
+}
+
+
+.cards .card:last-child .card-media img {
+    transform: scale(1.1);
+    object-position: 50% 55.5%;
 }
 
 
