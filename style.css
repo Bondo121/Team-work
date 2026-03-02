@@ -3,8 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
-/* ძირითადი სტილები */
+
 body {
     background-color: #fcfcfc;
     font-family: 'Poppins', sans-serif;
@@ -12,30 +13,152 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
-/* --- 2. BLOG CARD STYLES --- */
+/* ერთიანი კონტეინერი */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- 2. HEADER & NAV STYLES --- */
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 37px 84px;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-link {
+    color: #262626; 
+    font-weight: 700; 
+    font-size: 14px;
+    padding: 9px 32px;
+    border-radius: 40px;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #4CE0D7;
+}
+
+.logo:hover img, .search:hover img {
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+/* --- 3. HERO (ABOUT US) STYLES --- */
+.about-us {
+    background-image: url("assets/img1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 84px;
+    max-width: 1272px;
+    height: 559px;
+    border-radius: 20px;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+    padding: 218px 57px;
+    gap: 20px;
+}
+
+.about-us-content h3 { font-size: 12px; font-weight: 700; color: white; }
+.about-us-content h1 { font-size: 46px; font-weight: 400; color: white; }
+
+.about-us-content h1 span {
+    background: linear-gradient(90deg, #4CE0D7, #8BA9F4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.about-us-content p { font-size: 20px; color: white; max-width: 494px; }
+
+/* --- 4. TOPICS (SMALL CARDS) STYLES --- */
+.title {
+    font-weight: 700;
+    font-size: 32px;
+    margin: 73px 84px 0;
+}
+
+.cards {
+    display: flex;
+    gap: 10px;
+    margin: 48px 84px;
+}
+
+.card-small { /* აქ გადაერქვა სახელი რომ არ აირიოს */
+    width: 204px;
+    height: 291px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.card-small:hover { transform: scale(1.1); }
+.card-small img { margin-top: 51px; width: 90px; height: 90px; }
+.card-small h3 { margin-top: 27px; margin-bottom: 29px; font-size: 20px; font-weight: 700; }
+
+.button {
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 40px;
+    background-color: #4CE0D7;
+    padding: 10px 40px;
+    color: #262626;
+    transition: 0.3s;
+}
+
+.button:hover { background: #ccc; }
+
+.section-divider {               
+    background-color: #BCBCBC;  
+    margin: 87px 84px 52px;          
+    height: 1px;
+    border: none;
+}
+
+/* --- 5. MAIN BLOG CARDS (FIGMA DESIGN) --- */
 .blog-list {
     padding: 80px 0;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin-left: 118px; /* ფიგმას ზუსტი მონაცემი */
 }
 
 .card {
     display: flex;
     width: 1204px;
     height: 368px;
-    background: transparent;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
     align-items: center;
     position: relative;
-    transition: transform 0.4s ease; /* Hover animation */
+    overflow: hidden;
+    transition: transform 0.4s ease;
 }
 
-/* HOVER: Card lift effect */
-.card:hover {
-    transform: translateY(-10px);
-}
+.card:hover { transform: translateY(-10px); }
 
 .card-image {
     width: 547.51px;
@@ -53,43 +176,25 @@ body {
     object-fit: cover;
     display: block;
     border-radius: 20px !important;
-    transition: transform 0.6s ease;
+    transition: 0.6s ease;
 }
 
-/* HOVER: Image zoom effect */
-.card:hover .card-image img {
-    transform: scale(1.05);
-}
+.card:hover .card-image img { transform: scale(1.05); }
 
 /* Image Positions */
 .post-img-1 { object-position: center 45%; }
-.post-img-2 { object-position: center; }
 .post-img-3 { object-position: center 40%; }
 
 .card-content {
     flex: 1;
     height: 368px;
-    background-color: #ffffff;
     padding: 40px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
-    /* Right side rounded, Left side straight for seamless fit */
-    border-top-right-radius: 20px !important;
-    border-bottom-right-radius: 20px !important;
-    border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
-    margin-left: -1px;
     z-index: 1;
-    transition: box-shadow 0.3s ease;
 }
 
-.card:hover .card-content {
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.08);
-}
-
-/* --- 3. TYPOGRAPHY & INTERACTIVE ELEMENTS --- */
 .author-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
 .author-left { display: flex; align-items: center; gap: 12px; }
 
@@ -98,23 +203,21 @@ body {
     height: 50.77px;
     border-radius: 50%;
     object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
 .author-name, .post-date { font-size: 14px; color: #BCBCBC; font-weight: 400; }
 h2 { font-size: 26px; font-weight: 700; margin-bottom: 15px; color: #262626; line-height: 1.2; }
 p { font-size: 16px; color: #262626; line-height: 1.6; margin-bottom: 30px; }
 
-/* HOVER: Read more arrow animation */
+/* READ MORE & ARROW */
 .read-more {
     color: #4CE0D7;
-    text-decoration: none;
     font-weight: 700;
     font-size: 12px;
     letter-spacing: 0.24em;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     text-transform: uppercase;
 }
 
@@ -127,7 +230,7 @@ p { font-size: 16px; color: #262626; line-height: 1.6; margin-bottom: 30px; }
     display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;
 }
 
-/* --- 4. FOOTER STYLES --- */
+/* --- 6. FOOTER STYLES --- */
 .footer {
     background-color: #FFFFFF;
     width: 100%;
@@ -144,15 +247,13 @@ p { font-size: 16px; color: #262626; line-height: 1.6; margin-bottom: 30px; }
 .footer-container { width: 1267px; display: flex; flex-direction: column; align-items: center; }
 .footer-top { width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; padding: 0 40px; }
 
-/* Cinzel Logo & Highlight */
-.logo { font-family: 'Cinzel', serif; font-size: 36px; color: #262626; text-transform: uppercase; position: relative; }
-.logo .accent { position: relative; margin-left: 10px; z-index: 1; padding: 0 5px; }
-.logo .accent::after {
+.logo-footer { font-family: 'Cinzel', serif; font-size: 36px; color: #262626; text-transform: uppercase; position: relative; }
+.logo-footer .accent { position: relative; margin-left: 10px; z-index: 1; padding: 0 5px; }
+.logo-footer .accent::after {
     content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
     width: 147px; height: 20px; background-color: #4CE0D7; z-index: -1;
 }
 
-/* Social Block & Icons */
 .social-block { display: flex; align-items: center; gap: 30px; }
 .hang-out-text { font-size: 26px; font-weight: 700; color: #262626; }
 
@@ -163,551 +264,18 @@ p { font-size: 16px; color: #262626; line-height: 1.6; margin-bottom: 30px; }
     color: #ffffff;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    text-decoration: none; font-size: 14px;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
-/* HOVER: Social Icon animation */
-.social-links a:hover {
-    transform: scale(1.2) rotate(10deg);
-    background-color: #262626;
-}
-
-.footer-line { width: 1267px; border: none; border-top: 1px solid #BCBCBC; margin-bottom: 25px; }
-.copyright { width: 100%; text-align: left; padding-left: 40px; font-weight: 700; font-size: 14px; color: #262626; line-height: 100%; }
- 
-
-.container-second {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 118px
-}
-
-/* დიდი ბარათის სტილები */
-.card-big {
-    position: relative;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    margin-bottom: 97px;
-    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
-    
-    
-}
-
-
-.card-big .card-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 20px;
-    object-position: 50% 54.5%;
-}
-
-.card-big .card-content {
-    padding: 23px 64px;
-}
-
-.card-big .card-media {
-    height: 360px;
-    overflow: hidden;
-}
-
-/* დიდი ღილაკის სტილები */
-.button-all {
-    position: absolute;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 18px;
-    top: 20px; 
-    left: 40px;
-    background: #262626;
-    border-radius: 40px;
-    transform: matrix(1, -0.01, 0.01, 1, 0, 0); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.button-lg{
-    width: 233.95px;
-    height: 36.49px;
-}
-
-
-.button-sm{
-    width: 175.44px;
-    height: 36.49px;
-}
-
-/* დიდი ბარათის სტილები */
-.card-big-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.author-second{
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-right: 49px;
-}
-
-
-.author-second img{
-    width: 65.67px;
-    height: 50.77px;
-}
-
-
-.hot {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 21px;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    margin-left: 389px;
-    color: #F25E5E;
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-
-
-.grey{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: #BCBCBC;
-
-}
-
-
-.text-top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 29px;
-    width: 100%;
-}
-
-
-.big-card-title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 39px;
-    margin-bottom: 23px;
-    color: #262626;
-}
-
-
-.text{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #262626;
-    margin-bottom: 40px;
-}
-
-
-.small{
-    padding-left: 35px;
-}
-
-
-.read-shape{
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    margin-bottom: 38px;
-    width: fit-content;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-
-.shape-small{
-    padding-left: 40px;
-}
-
-
-.read-shape img {
-    width: 21.25px;
-    height: auto;
-}
-
-
-.read-link{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0.24em;
-    color: #4CE0D7;
-    transition: color 0.3s ease;
-}
-
-/* პატარა ბარათების სტილები */
-.cards-title{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 48px;
-    color: #262626;
-    margin-bottom: 55px;
-}
-
-
-.cards-second{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 59px;
-    margin-bottom: 88px;
-}
-
-
-.card-second{
-    width: 100%;
-    overflow: hidden;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
-
-}
-
-
-.card-media{
-    width: 100%;
-    height: 278px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    border-radius: 20px;
-}
-
-
-.card-second .card-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-
-.cards-second .card-second:first-child .card-media img{
-    transform: translateX(-6%) scale(1.2);
-    transform-origin: center;
-}
-
-
-.cards-second .card-second:last-child .card-media img {
-    transform: scale(1.1);
-    object-position: 50% 55.5%;
-}
-
-
-.card-meta{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 26px;
-    margin-top: 23px;
-    margin-bottom: 28px;
-}
-
-
-.card-title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 34px;
-    font-family: 'Poppins' sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 39px;
-    color: #262626;
-    margin-bottom: 18px;
-}
-
-/* ეფექტები მაუსის მიტანისას */
-.hot:hover {
-    transform: scale(1.1);
-    color: #ff3d3d;
-    text-shadow: 0px 0px 10px rgba(242, 94, 94, 0.3);
-}
-
-
-.read-shape:hover img {
-    transform: translateX(8px);
-}
-
-
-.read-shape:hover .read-link {
-    color: #3bcbc2;
-    text-decoration: underline;
-}
-
-
-.card-second:hover {
-    transform: translateY(-15px);
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-
-.card-big:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-
-.button-all:hover {
-    background-color: white;
-    color: #262626;
-    outline: 1px solid #262626; 
-}
-
-/* ადაპტიური სტილები */
-@media (max-width: 1024px) {
-    .container-second {
-        padding: 0 40px;
-    }
-
-    .card-big .card-content {
-        padding: 23px 30px;
-    }
-
-    .big-card-title, .card-title {
-        font-size: 22px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .text-top {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .hot {
-        margin-left: 0;
-    }
-
-    .button-lg, .button-sm {
-        width: 160px;
-        left: 20px;
-    }
-
-    .cards-second {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .card-second {
-        width: 100%;            
-        max-width: 500px;
-    }
-
-}
-
-
-
-.container {
-    margin: 0 auto;
-    max-width: 1440px;
-    width: 100%;
-}
-
-/* header-ის გასტილვა */
-
-.header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 37px 84px;
-}
-
-/* ნავიგაციის გასტილვა */
-
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.nav-link {
-    color: rgba(38, 38, 38, 1); 
-    font-weight: 700; 
-    font-style: Bold; 
-    font-size: 14px;
-    padding: 9px 32px;
-    border-radius: 40px;
-}
-
-/* ნავიგაციის ელემენტების hover*/
-
-.nav-link:hover {
-    background-color: rgba(76, 224, 215, 1);
-    transition: 0.3s;
-}
-
-.logo:hover img,
-.search:hover img {
-    transition: 0.5s;
-    transform: scale(1.2);
-}
-
-
-/* header-ის გასტილვის დასასრული */
-
-/* about-us სექციის გასტილვა */
-
-.about-us {
-    background-image: url("assets/img1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0 84px;;
-    max-width: 1272px;
-    height: 559px;
-    border-radius: 20px;
-}
-
-.about-us-content {
-    display: flex;
-    flex-direction: column;
-    padding: 218px 57px;
-    gap: 20px;
-}
-
-.about-us-content h3 {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 1);
-}
-
-.about-us-content h1 {
-    font-weight: 400;
-    font-size: 46px;
-    color: rgba(255, 255, 255, 1);
-}
-
-
-.about-us-content h1 span {
-    background: linear-gradient(90deg, #4CE0D7, #8BA9F4);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-style: bold;
-    font-weight: 700;
-}
-
-.about-us-content p {
-    max-width: 494px;
-    height: 72px;
-    font-weight: 400;
-    font-size: 20px;
-    color: rgba(255, 255, 255, 1);
-}
-
-/* about-us სექციის გასტილვის დასასრული */
-
-/* topics ქარდების გასტილვა*/
-
-.title {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 32px;
-    margin-top: 73px;
-    margin-left: 84px;
-}
-
-.cards {
-    display: flex;
-    gap: 10px;
-    margin-top: 48px;
-    margin-left: 84px;
-    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.05);
-
-}
-.card {
-    width: 204px;
-    height: 291px;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-}
-
-.card img {
-    margin-top: 51px;
-    width: 90px;
-    height: 90px;
-}
-
-.card-text,
-.button {
-    font-weight: 700;
-    font-style: Bold;
-    text-align: center;
-    color: rgba(38, 38, 38, 1);
-}
-
-.card h3 {
-    margin-top: 27px;
-    margin-bottom: 29px;
-    font-size: 20px;
-}
-
-.button {
-    font-size: 12px;
-    padding: 144px 36px;
-    border-radius: 40px;
-    background-color: rgba(76, 224, 215, 1);
-    padding: 10px 40px;
-}
-
-
-/* Topics ქარდების და ბათონების hover */
-.button:hover {
-    background: rgb(202, 199, 199);
-}
-
-.card:hover {
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-
-/* ხაზის სტილები */
-
-.section-divider {               
-    background-color: rgba(188, 188, 188, 1);  
-    margin: 87px 84px 52px;          
-    max-width: 1267px;   
-    border: 1px solid rgba(188, 188, 188, 1)       
+.social-links a:hover { transform: scale(1.2) rotate(10deg); background-color: #262626; }
+
+.footer-line { border: none; border-top: 1px solid #BCBCBC; margin-bottom: 25px; width: 100%; }
+.copyright { font-weight: 700; font-size: 14px; color: #262626; width: 100%; text-align: left; padding-left: 40px; }
+
+/* --- 7. ADAPTIVE STYLES --- */
+@media (max-width: 1300px) {
+    .blog-list { margin-left: 50px; }
+    .card { width: 95%; height: auto; flex-direction: column; }
+    .card-image { width: 100%; height: 350px; }
+    .card-content { width: 100%; }
 }
