@@ -1,95 +1,4 @@
-/* --- RESPONSIVE STYLES --- */
-
-/* პლანშეტებისთვის (1024px-მდე) */
-@media (max-width: 1024px) {
-    .main-container, .footer-container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .card {
-        width: 100%; /* იკავებს ხელმისაწვდომ ადგილს */
-        max-width: 1000px; /* ოდნავ პატარავდება */
-    }
-
-    .footer-container {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
-/* მობილურებისთვის (768px-მდე) */
-@media (max-width: 768px) {
-    /* ბარათის გადაწყობა: სურათი ზემოთ, ტექსტი ქვემოთ */
-    .card {
-        flex-direction: column; 
-        height: auto; /* სიმაღლე ავტომატური ხდება */
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .card-image {
-        width: 100%;
-        height: 300px; /* სურათის სიმაღლე მცირდება */
-        border-radius: 20px 20px 0 0 !important; /* მრგვალდება მხოლოდ ზედა კუთხეები */
-    }
-
-    .card-image img {
-        border-radius: 20px 20px 0 0 !important;
-    }
-
-    .card-content {
-        width: 100%;
-        margin-left: 0; /* ვაუქმებთ ნაპრალის გასწორების margin-ს */
-        padding: 30px 20px;
-        border-radius: 0 0 20px 20px !important; /* მრგვალდება მხოლოდ ქვედა კუთხეები */
-        text-align: center; /* ტექსტი ცენტრდება მობილურზე */
-    }
-
-    /* ავტორის სექციის და ცენტრება */
-    .author-row {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .author-left {
-        flex-direction: column;
-    }
-
-    /* "READ MORE" ისრის და ტექსტის ცენტრირება */
-    .read-more {
-        justify-content: center;
-    }
-
-    /* ფუტერის გადაწყობა */
-    .footer {
-        height: auto;
-        padding: 50px 20px;
-    }
-
-    .footer-top {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .logo {
-        font-size: 28px; /* ლოგო ოდნავ პატარავდება */
-    }
-
-    .social-block {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .footer-line {
-        width: 100%;
-    }
-
-    .copyright {
-        text-align: center;
-        padding-left: 0;
+  /* - HEADER RESPONSIVES - */
 @media (max-width: 1024px) {
     .header, .about-us, .title, .cards {
         margin-left: 20px;
@@ -146,5 +55,149 @@
         font-size: 24px;
         text-align: center;
         margin-left: 0;
+    }
+}
+
+
+/* - TRENDING RESPONSIVES - */
+@media (max-width: 1024px) {
+    .container-second {
+        padding: 0 40px;
+    }
+
+    .card-big .card-content {
+        padding: 23px 30px;
+    }
+
+    .big-card-title, .card-title {
+        font-size: 22px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .text-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .hot {
+        margin-left: 0;
+    }
+
+    .button-lg, .button-sm {
+        width: 160px;
+        left: 20px;
+    }
+
+    .cards-second {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .card-second {
+        width: 100%;            
+        max-width: 500px;
+    }
+
+}
+
+
+/* - FOOTER RESPONSIVES - */
+
+/* --- RESPONSIVE STYLES --- */
+
+/* პლანშეტებისთვის (1024px-მდე) */
+@media (max-width: 1024px) {
+    .main-container, .footer-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .card-third {
+        width: 100%; /* იკავებს ხელმისაწვდომ ადგილს */
+        max-width: 1000px; /* ოდნავ პატარავდება */
+    }
+
+    .footer-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* მობილურებისთვის (768px-მდე) */
+@media (max-width: 768px) {
+    /* ბარათის გადაწყობა: სურათი ზემოთ, ტექსტი ქვემოთ */
+    .card-third {
+        flex-direction: column; 
+        height: auto; /* სიმაღლე ავტომატური ხდება */
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 300px; /* სურათის სიმაღლე მცირდება */
+        border-radius: 20px 20px 0 0 !important; /* მრგვალდება მხოლოდ ზედა კუთხეები */
+    }
+
+    .card-image img {
+        border-radius: 20px 20px 0 0 !important;
+    }
+
+    .card-third-content {
+        width: 100%;
+        margin-left: 0; /* ვაუქმებთ ნაპრალის გასწორების margin-ს */
+        padding: 30px 20px;
+        border-radius: 0 0 20px 20px !important; /* მრგვალდება მხოლოდ ქვედა კუთხეები */
+        text-align: center; /* ტექსტი ცენტრდება მობილურზე */
+    }
+
+    /* ავტორის სექციის და ცენტრება */
+    .author-row {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .author-left {
+        flex-direction: column;
+    }
+
+    /* "READ MORE" ისრის და ტექსტის ცენტრირება */
+    .read-more {
+        justify-content: center;
+    }
+
+    /* ფუტერის გადაწყობა */
+    .footer {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .logo-footer {
+        font-size: 28px; /* ლოგო ოდნავ პატარავდება */
+    }
+
+    .social-block {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-line {
+        width: 100%;
+    }
+
+    .copyright {
+        text-align: center;
+        padding-left: 0;
     }
 }
