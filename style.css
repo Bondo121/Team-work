@@ -4,6 +4,186 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+/* -- HEADER SECTION STYLES -- */
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+}
+
+/* header-ის გასტილვა */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 37px 84px;
+}
+
+/* ნავიგაციის გასტილვა */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-link {
+    color: rgba(38, 38, 38, 1); 
+    font-weight: 700; 
+    font-style: Bold; 
+    font-size: 14px;
+    padding: 9px 32px;
+    border-radius: 40px;
+}
+
+/* ნავიგაციის ელემენტების hover*/
+
+.nav-link:hover {
+    background-color: rgba(76, 224, 215, 1);
+    transition: 0.3s;
+}
+
+.logo:hover img,
+.search:hover img {
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+
+/* header-ის გასტილვის დასასრული */
+
+/* about-us სექციის გასტილვა */
+
+.about-us {
+    background-image: url("assets/img1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 84px;;
+    max-width: 1272px;
+    height: 559px;
+    border-radius: 20px;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+    padding: 218px 57px;
+    gap: 20px;
+}
+
+.about-us-content h3 {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.about-us-content h1 {
+    font-weight: 400;
+    font-size: 46px;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+.about-us-content h1 span {
+    background: linear-gradient(90deg, #4CE0D7, #8BA9F4);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: bold;
+    font-weight: 700;
+}
+
+.about-us-content p {
+    max-width: 494px;
+    height: 72px;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* about-us სექციის გასტილვის დასასრული */
+
+/* topics ქარდების გასტილვა*/
+
+.title {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 32px;
+    margin-top: 73px;
+    margin-left: 84px;
+}
+
+.cards {
+    display: flex;
+    gap: 10px;
+    margin-top: 48px;
+    margin-left: 84px;
+
+}
+.card {
+    width: 204px;
+    height: 291px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.card img {
+    margin-top: 51px;
+    width: 90px;
+    height: 90px;
+}
+
+.card-text,
+.button {
+    font-weight: 700;
+    font-style: Bold;
+    text-align: center;
+    color: rgba(38, 38, 38, 1);
+}
+
+.card h3 {
+    margin-top: 27px;
+    margin-bottom: 29px;
+    font-size: 20px;
+}
+
+.button {
+    font-size: 12px;
+    padding: 144px 36px;
+    border-radius: 40px;
+    background-color: rgba(76, 224, 215, 1);
+    padding: 10px 40px;
+}
+
+
+/* Topics ქარდების და ბათონების hover */
+.button:hover {
+    background: rgb(202, 199, 199);
+}
+
+.card:hover {
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+
+/* ხაზის სტილები */
+
+.section-divider {               
+    background-color: rgba(188, 188, 188, 1);  
+    margin: 87px 84px 52px;          
+    max-width: 1267px;   
+    border: 1px solid rgba(188, 188, 188, 1)       
+}
+
+
 /* ძირითადი სტილები */
 body {
     background-color: #F0F0F0;
@@ -16,6 +196,7 @@ body {
     padding: 0 118px
 }
 
+/* -- TRENDING SECTION STYLES --/*
 /* დიდი ბარათის სტილები */
 .card-big {
     position: relative;
@@ -38,6 +219,7 @@ body {
     border-radius: 20px;
     object-position: 50% 54.5%;
 }
+
 
 .card-big .card-content {
     padding: 23px 64px;
@@ -320,192 +502,15 @@ body {
 }
 
 
-.container {
-    margin: 0 auto;
-    max-width: 1440px;
-    width: 100%;
-}
-
-/* header-ის გასტილვა */
-
-.header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 37px 84px;
-}
-
-/* ნავიგაციის გასტილვა */
-
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.nav-link {
-    color: rgba(38, 38, 38, 1); 
-    font-weight: 700; 
-    font-style: Bold; 
-    font-size: 14px;
-    padding: 9px 32px;
-    border-radius: 40px;
-}
-
-/* ნავიგაციის ელემენტების hover*/
-
-.nav-link:hover {
-    background-color: rgba(76, 224, 215, 1);
-    transition: 0.3s;
-}
-
-.logo:hover img,
-.search:hover img {
-    transition: 0.5s;
-    transform: scale(1.2);
-}
-
-
-/* header-ის გასტილვის დასასრული */
-
-/* about-us სექციის გასტილვა */
-
-.about-us {
-    background-image: url("assets/img1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0 84px;;
-    max-width: 1272px;
-    height: 559px;
-    border-radius: 20px;
-}
-
-.about-us-content {
-    display: flex;
-    flex-direction: column;
-    padding: 218px 57px;
-    gap: 20px;
-}
-
-.about-us-content h3 {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 1);
-}
-
-.about-us-content h1 {
-    font-weight: 400;
-    font-size: 46px;
-    color: rgba(255, 255, 255, 1);
-}
-
-
-.about-us-content h1 span {
-    background: linear-gradient(90deg, #4CE0D7, #8BA9F4);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-style: bold;
-    font-weight: 700;
-}
-
-.about-us-content p {
-    max-width: 494px;
-    height: 72px;
-    font-weight: 400;
-    font-size: 20px;
-    color: rgba(255, 255, 255, 1);
-}
-
-/* about-us სექციის გასტილვის დასასრული */
-
-/* topics ქარდების გასტილვა*/
-
-.title {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 32px;
-    margin-top: 73px;
-    margin-left: 84px;
-}
-
-.cards {
-    display: flex;
-    gap: 10px;
-    margin-top: 48px;
-    margin-left: 84px;
-    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.05);
-
-}
-.card {
-    width: 204px;
-    height: 291px;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-}
-
-.card img {
-    margin-top: 51px;
-    width: 90px;
-    height: 90px;
-}
-
-.card-text,
-.button {
-    font-weight: 700;
-    font-style: Bold;
-    text-align: center;
-    color: rgba(38, 38, 38, 1);
-}
-
-.card h3 {
-    margin-top: 27px;
-    margin-bottom: 29px;
-    font-size: 20px;
-}
-
-.button {
-    font-size: 12px;
-    padding: 144px 36px;
-    border-radius: 40px;
-    background-color: rgba(76, 224, 215, 1);
-    padding: 10px 40px;
-}
-
-
-/* Topics ქარდების და ბათონების hover */
-.button:hover {
-    background: rgb(202, 199, 199);
-}
-
-.card:hover {
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-
-/* ხაზის სტილები */
-
-.section-divider {               
-    background-color: rgba(188, 188, 188, 1);  
-    margin: 87px 84px 52px;          
-    max-width: 1267px;   
-    border: 1px solid rgba(188, 188, 188, 1)       
-}
-
+/* --- 1. BLOG CARD SECTION STYLES --- */
 .blog-list {
     padding: 80px 0;
     display: flex;
     flex-direction: column;
+    align-items: center; /* ჩამატებული ცენტრირებისთვის */
     gap: 40px;
-    margin-left: 0px; /* ფიგმას ზუსტი მონაცემი: Left 118px */
 }
+
 .card-third {
     display: flex;
     width: 1204px;
@@ -513,6 +518,7 @@ body {
     background: transparent;
     align-items: center;
     position: relative;
+    margin: 0 auto; /* დამატებითი დაზღვევა ცენტრირებისთვის */
     transition: transform 0.4s ease; /* Hover animation */
 }
 
