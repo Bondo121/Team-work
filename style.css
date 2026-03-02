@@ -7,6 +7,7 @@
 /* ძირითადი სტილები */
 body {
     background-color: #F0F0F0;
+    font-family: 'Poppins', sans-serif
 }
 
 .container-second {
@@ -48,7 +49,7 @@ body {
 }
 
 /* დიდი ღილაკის სტილები */
-.button {
+.button-all {
     position: absolute;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -86,7 +87,7 @@ body {
 }
 
 
-.author{
+.author-second{
     display: flex;
     align-items: center;
     gap: 14px;
@@ -94,7 +95,7 @@ body {
 }
 
 
-.author img{
+.author-second img{
     width: 65.67px;
     height: 50.77px;
 }
@@ -207,7 +208,7 @@ body {
 }
 
 
-.cards{
+.cards-second{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -217,7 +218,7 @@ body {
 }
 
 
-.card{
+.card-second{
     width: 100%;
     overflow: hidden;
     background-color: white;
@@ -238,7 +239,7 @@ body {
 }
 
 
-.card .card-media img {
+.card-second .card-media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -246,13 +247,13 @@ body {
 }
 
 
-.cards .card:first-child .card-media img{
+.cards-second .card-second:first-child .card-media img{
     transform: translateX(-6%) scale(1.2);
     transform-origin: center;
 }
 
 
-.cards .card:last-child .card-media img {
+.cards-second .card-second:last-child .card-media img {
     transform: scale(1.1);
     object-position: 50% 55.5%;
 }
@@ -300,7 +301,7 @@ body {
 }
 
 
-.card:hover {
+.card-second:hover {
     transform: translateY(-15px);
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
 }
@@ -312,7 +313,7 @@ body {
 }
 
 
-.button:hover {
+.button-all:hover {
     background-color: white;
     color: #262626;
     outline: 1px solid #262626; 
@@ -350,23 +351,20 @@ body {
         left: 20px;
     }
 
-    .cards {
+    .cards-second {
         flex-direction: column;
         align-items: center;
         gap: 40px;
     }
 
-    .card {
+    .card-second {
         width: 100%;            
         max-width: 500px;
     }
 
 }
 
-body{
-    background-color: #FAFAFA;
-    font-family: poppins;
-}
+
 
 .container {
     margin: 0 auto;
