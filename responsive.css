@@ -90,5 +90,61 @@
     .copyright {
         text-align: center;
         padding-left: 0;
+@media (max-width: 1024px) {
+    .header, .about-us, .title, .cards {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header {
+        padding: 20px 0;
+        flex-direction: column;
+    }
+
+    .cards {
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-us {
+        height: auto; 
+        min-height: 400px;
+    }
+
+    .about-us-content {
+        padding: 100px 20px; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-us-content h1 {
+        font-size: 32px; 
+    }
+
+    .about-us-content p {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 24px;
+        text-align: center;
+        margin-left: 0;
     }
 }
