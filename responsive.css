@@ -45,6 +45,7 @@
         border-radius: 0 0 20px 20px !important; /* მრგვალდება მხოლოდ ქვედა კუთხეები */
         text-align: center; /* ტექსტი ცენტრდება მობილურზე */
     }
+}
 
     /* ავტორის სექციის და ცენტრება */
     .author-row {
@@ -89,7 +90,8 @@
 
     .copyright {
         text-align: center;
-        padding-left: 0;
+        padding-left: 0;}
+        
 @media (max-width: 1024px) {
     .header, .about-us, .title, .cards {
         margin-left: 20px;
